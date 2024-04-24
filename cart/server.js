@@ -1,12 +1,4 @@
 require('newrelic');
-const instana = require('@instana/collector');
-// init tracing
-// MUST be done before loading anything else!
-instana({
-    tracing: {
-        enabled: true
-    }
-});
 
 const redis = require('redis');
 const request = require('request');
