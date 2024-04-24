@@ -13,3 +13,8 @@ $request = Request::createFromGlobals();
 $response = $kernel->handle($request);
 $response->send();
 $kernel->terminate($request, $response);
+
+// Enable New Relic PHP agent
+if (extension_loaded('newrelic')) {
+    newrelic_set_appname('ratings');
+}
