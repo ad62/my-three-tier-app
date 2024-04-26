@@ -34,6 +34,13 @@ spec:
           requests:
             cpu: 100m
             memory: 700Mi
+      - name: newrelic-infrastructure
+        image: newrelic/infrastructure:latest
+        env:
+        - name: NRIA_LICENSE_KEY
+          value: "d27bd10be363ab7b7d243f2e8415d9b5FFFFNRAL"
+        securityContext:
+          privileged: true
       restartPolicy: Always
       {{- with .Values.mysql.affinity }}
       affinity:
