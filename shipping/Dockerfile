@@ -3,9 +3,6 @@
 #
 FROM maven:3.8.1-openjdk-11 AS build
 
-RUN apt-get update && \
-    apt-get install -y maven
-
 WORKDIR /opt/shipping
 
 COPY pom.xml /opt/shipping/
@@ -16,7 +13,7 @@ RUN mvn package
 #
 # Run
 #
-FROM openjdk:8-jdk
+FROM openjdk:11-jre-slim
 
 EXPOSE 8080
 
