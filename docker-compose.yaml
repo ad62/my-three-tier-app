@@ -142,7 +142,7 @@ services:
   web:
     build:
       context: web
-      args:[]
+      args: []
         # agent key to download tracing libs
         # KEY: d27bd10be363ab7b7d243f2e8415d9b5FFFFNRAL
     image: ${REPO}/rs-web:${TAG}
