@@ -160,8 +160,8 @@ services:
       interval: 10s
       timeout: 10s
       retries: 3
-      environment:
-       NEWRELIC_EUM_KEY: d27bd10be363ab7b7d243f2e8415d9b5FFFFNRAL
+    environment:
+      NEWRELIC_EUM_KEY: d27bd10be363ab7b7d243f2e8415d9b5FFFFNRAL
     logging:
       <<: *logging
 
