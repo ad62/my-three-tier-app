@@ -142,7 +142,7 @@ services:
   web:
     build:
       context: web
-      args:
+      args:[]
         # agent key to download tracing libs
         # KEY: ${INSTANA_AGENT_KEY}
     image: ${REPO}/rs-web:${TAG}
