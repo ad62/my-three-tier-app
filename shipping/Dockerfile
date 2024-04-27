@@ -4,7 +4,7 @@
 FROM maven:3.8.1-openjdk-11 AS build
 
 RUN apt-get update && \
-    apt-get install -y <any_additional_dependencies_you_need>
+    apt-get install -y maven
 
 WORKDIR /opt/shipping
 
