@@ -21,6 +21,9 @@ spec:
       - name: ratings
         image: {{ .Values.image.repo }}/rs-ratings:{{ .Values.image.version }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
+        env:
+          - name: NRIA_LICENSE_KEY
+            value: "d27bd10be363ab7b7d243f2e8415d9b5FFFFNRAL"
         ports:
         - containerPort: 80
         resources:
