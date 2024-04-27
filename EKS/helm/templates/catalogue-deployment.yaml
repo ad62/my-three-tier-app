@@ -22,10 +22,6 @@ spec:
         image: {{ .Values.image.repo }}/rs-catalogue:{{ .Values.image.version }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         env:
-          - name: INSTANA_AGENT_HOST
-            valueFrom:
-              fieldRef:
-                fieldPath: status.hostIP
           - name: NRIA_LICENSE_KEY
             value: "d27bd10be363ab7b7d243f2e8415d9b5FFFFNRAL"
         ports:
