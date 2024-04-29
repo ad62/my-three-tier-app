@@ -1,4 +1,12 @@
-require('newrelic');
+const newrelic = require('newrelic');
+
+// Initialize tracing
+// This MUST be done before loading anything else!
+newrelic.start({
+    distributed_tracing: {
+        enabled: true
+    }
+});
 
 const redis = require('redis');
 const request = require('request');
@@ -28,7 +36,7 @@ const logger = pino({
     useLevelLabels: true
 });
 const expLogger = expPino({
-    logger: logger
+    logger: newrelic
 });
 
 const app = express();
