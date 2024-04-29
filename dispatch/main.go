@@ -165,7 +165,6 @@ func processSale(parentSpan ot.Span) {
 }
 
 func main() {
-	initNewRelic()
 	rand.Seed(time.Now().Unix())
 
 	// Instana tracing
