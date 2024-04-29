@@ -1,23 +1,6 @@
 package main
 
 import (
-    "log"
-    "os"
-
-    "github.com/newrelic/go-agent/v3/newrelic"
-)
-
-func initNewRelic() {
-    newRelicConfig := newrelic.NewConfig("Dispatch_Service", "d27bd10be363ab7b7d243f2e8415d9b5FFFFNRAL")
-    app, err := newrelic.NewApplication(newRelicConfig)
-    if err != nil {
-        log.Fatal("Failed to initialize New Relic agent:", err)
-    }
-    newrelic.Application = app // Set the global application instance
-}
-
-
-import (
 	"encoding/json"
 	"fmt"
 	"log"
