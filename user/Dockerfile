@@ -8,6 +8,7 @@ WORKDIR /opt/server
 
 COPY package.json /opt/server/
 
+RUN npm install newrelic --save
 RUN npm install
 
 COPY server.js /opt/server/
