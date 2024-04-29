@@ -1,4 +1,12 @@
-require('newrelic');
+const newrelic = require('newrelic');
+
+// Initialize tracing
+// This MUST be done before loading anything else!
+newrelic.start({
+    distributed_tracing: {
+        enabled: true
+    }
+});
 
 const mongoClient = require('mongodb').MongoClient;
 const mongoObjectID = require('mongodb').ObjectID;
@@ -13,7 +21,7 @@ const logger = pino({
     useLevelLabels: true
 });
 const expLogger = expPino({
-    logger: logger
+    logger: newrelic
 });
 
 // MongoDB
