@@ -38,7 +38,7 @@ spec:
         image: newrelic/infrastructure:latest
         env:
          - name: NRIA_LICENSE_KEY
-           value: "d27bd10be363ab7b7d243f2e8415d9b5FFFFNRAL"
+           value: "c2e337b75c0ff482e037be0910e20e45FFFFNRAL"
         securityContext:
           privileged: true
       restartPolicy: Always
