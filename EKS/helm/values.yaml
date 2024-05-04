@@ -7,7 +7,7 @@ image:
 
 # New Relic APM configuration
 newrelic:
-  key: "d27bd10be363ab7b7d243f2e8415d9b5FFFFNRAL"
+  key: "c2e337b75c0ff482e037be0910e20e45FFFFNRAL"
   # Optional: Set the New Relic APM endpoint
   # url: "https://your-new-relic-endpoint"
   
